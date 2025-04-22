@@ -1,25 +1,14 @@
 /*
-  OPTIONAL CHAINING (?.) - encadeamento opcional
-  Se a propriedade ou função chamada é nullish (null or undefined), a expressão retorna undefined em vez de gerar um erro.
-
-  Útil ao explorar o conteúdo de um objeto quando não existe garantia da existência de determinadas propriedades obrigatórias.
+  OPERADOR DE COALESCÊNCIA NULA (??)
+  Operador lógico que retorna o seu operando do lado direito quando o seu operador do lado esquerdo é null or undefined. Caso contrário, ele retorna o seu operando do lado esquerdo
 */
 
+let content = null
+console.log(content ?? "<- É nulo")
+
 const user = {
-  id: 1,
   name: "Diego",
-  /*address: {
-    street: "Avenida Brasil",
-    city: "São Paulo",
-    geo: {
-      latitude: 47.8080,
-      longitude: 17.5674,
-    },
-  },*/
-  message: function() {
-    console.log(`Olá, ${this.name}!`)
-  }
+  avatar: undefined
 }
 
-console.log(user?.address?.street)
-user.message?.()
+console.log(user.avatar ?? "default.png") //Lógica: Se possui beleza, se não exibe o da direita
