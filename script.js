@@ -1,14 +1,47 @@
-/*
-  OPERADOR DE COALESCÊNCIA NULA (??)
-  Operador lógico que retorna o seu operando do lado direito quando o seu operador do lado esquerdo é null or undefined. Caso contrário, ele retorna o seu operando do lado esquerdo
-*/
+function createProduct(name) {
+  const product = {}
 
-let content = null
-console.log(content ?? "<- É nulo")
+  product.name = name
+  product.details = function(){
+    console.log(`O nome do produto é ${this.name}`)
+  }
 
-const user = {
-  name: "Diego",
-  avatar: undefined
+  return product 
 }
 
-console.log(user.avatar ?? "default.png") //Lógica: Se possui beleza, se não exibe o da direita
+// O new cria um novo objeto utilizando a mesma estrutura do construtor
+const product1 = new createProduct("Teclado")
+console.log(product1.name)
+product1.details()
+
+const product2 = new createProduct("Mouse")
+console.log(product2.name)
+product2.details()
+
+console.log(product1 === product2)
+
+
+// Exemplos de funções construtoras disponíveis no próprio Javascript.
+let myName = new String("Diego")
+console.log(myName)
+
+let price = "40.6".replace(".", "")
+console.log(price)
+
+let date = new Date("2024-1-1")
+console.log(date)
+
+function Person(name){
+  this.name = name
+  this.message = function() {
+    console.log(`Olá, ${this.name}`)
+  }
+}
+
+const person1 = new Person("Rodrigo")
+console.log(person1.name)
+person1.message()
+
+const person2 = new Person("João")
+console.log(person2.name)
+person2.message()
