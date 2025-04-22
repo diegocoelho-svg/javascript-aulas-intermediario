@@ -1,14 +1,15 @@
 let message = "Estou estudando os fundamentos do Javascript."
 
-// Comprimento de uma string (propriedade).
-console.log(message.length)
+// Substituindo parte de um texto.
+console.log(message.replace("os fundamentos do Javascript", "Métodos de String")) // Primeiro: A ser substituído | Segundo: O que entra no lugar
 
-let password = "12345"
-if(password.length < 6) {
-  console.log("A senha deve ter ao menos 6 caracteres")
-}
+// Extraindo uma parte da string (start, end)
+console.log(message.slice(6, 30)) // Anda 5 caracteres
 
-// Quantos dígitos tem um número
-let value = 12345
-console.log(String(value).length)
-console.log(value.toString().length)
+// Extraindo uma parte da string de trás para frente.
+console.log(message.slice(-11))
+
+let textWithSpace = "     Texto de exemplo          "
+console.log(textWithSpace.length)
+console.log(textWithSpace.trim())
+console.log(textWithSpace.trim().length)
