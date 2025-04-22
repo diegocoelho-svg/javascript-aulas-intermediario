@@ -10,11 +10,11 @@ console.log(obj)
 console.log(typeof obj)
 
 // Cria um objeto com propriedades e métodos.
-const person = {
+const user = {
   email: "diego@email.com",
   age: 21,
   name: {
-    firstName: "Diego",
+    first_name: "Diego",
     surname: "Coelho",
   },
   address: {
@@ -27,3 +27,17 @@ const person = {
     console.log("Hello Diego")
   }
 }
+
+// Acessando propriedades e métodos usando a notação de ponto
+console.log(user.email)
+
+// Acessando propriedade de objetos
+console.log(user.name.first_name)
+
+// Executou o método do objeto
+user.message()
+
+// Notação de Colchetes
+console.log(user["email"])
+console.log(user["name"]["first_name"])
+user["message"]()
