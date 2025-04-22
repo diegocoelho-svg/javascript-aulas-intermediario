@@ -1,17 +1,25 @@
-const product = {
-  name: "Teclado",
-  quantity: 100
+/*
+  OPTIONAL CHAINING (?.) - encadeamento opcional
+  Se a propriedade ou função chamada é nullish (null or undefined), a expressão retorna undefined em vez de gerar um erro.
+
+  Útil ao explorar o conteúdo de um objeto quando não existe garantia da existência de determinadas propriedades obrigatórias.
+*/
+
+const user = {
+  id: 1,
+  name: "Diego",
+  /*address: {
+    street: "Avenida Brasil",
+    city: "São Paulo",
+    geo: {
+      latitude: 47.8080,
+      longitude: 17.5674,
+    },
+  },*/
+  message: function() {
+    console.log(`Olá, ${this.name}!`)
+  }
 }
 
-// Atualizar o valor de uma propriedade
-console.log(product.quantity)
-product.quantity = 90
-console.log(product.quantity)
-
-console.log(product.name)
-product.name = "Mouse"
-console.log(product.name)
-
-// Notação de colchetes.
-product["quantity"] = 50
-console.log(product)
+console.log(user?.address?.street)
+user.message?.()
