@@ -1,9 +1,14 @@
 let message = "Estou estudando os fundamentos do Javascript."
 
-console.log(message)
+// Comprimento de uma string (propriedade).
+console.log(message.length)
 
-// Exibir o texto em maiúsculo.
-console.log(message.toUpperCase())
+let password = "12345"
+if(password.length < 6) {
+  console.log("A senha deve ter ao menos 6 caracteres")
+}
 
-// Exibir o texto em minúsculo.
-console.log(message.toLowerCase())
+// Quantos dígitos tem um número
+let value = 12345
+console.log(String(value).length)
+console.log(value.toString().length)
