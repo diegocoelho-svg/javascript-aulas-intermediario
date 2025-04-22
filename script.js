@@ -1,47 +1,9 @@
-function createProduct(name) {
-  const product = {}
+let message = "Estou estudando os fundamentos do Javascript."
 
-  product.name = name
-  product.details = function(){
-    console.log(`O nome do produto é ${this.name}`)
-  }
+console.log(message)
 
-  return product 
-}
+// Exibir o texto em maiúsculo.
+console.log(message.toUpperCase())
 
-// O new cria um novo objeto utilizando a mesma estrutura do construtor
-const product1 = new createProduct("Teclado")
-console.log(product1.name)
-product1.details()
-
-const product2 = new createProduct("Mouse")
-console.log(product2.name)
-product2.details()
-
-console.log(product1 === product2)
-
-
-// Exemplos de funções construtoras disponíveis no próprio Javascript.
-let myName = new String("Diego")
-console.log(myName)
-
-let price = "40.6".replace(".", "")
-console.log(price)
-
-let date = new Date("2024-1-1")
-console.log(date)
-
-function Person(name){
-  this.name = name
-  this.message = function() {
-    console.log(`Olá, ${this.name}`)
-  }
-}
-
-const person1 = new Person("Rodrigo")
-console.log(person1.name)
-person1.message()
-
-const person2 = new Person("João")
-console.log(person2.name)
-person2.message()
+// Exibir o texto em minúsculo.
+console.log(message.toLowerCase())
