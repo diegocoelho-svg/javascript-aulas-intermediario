@@ -1,6 +1,10 @@
-// Loop Infinito
-let value = true
+// DO WHILE: Repete até que a condição especificada seja VERDADEIRA. No entanto, a instrução será executada pelo menos uma vez antes da condição ser verificada.
 
- while(value) {
-  console.log("Executando while...")
-}
+let value = 11
+
+do {
+  value++
+  console.log(value)
+} while (value < 10)
+
+console.log("Segue fluxo...")
