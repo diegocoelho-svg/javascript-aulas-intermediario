@@ -1,18 +1,8 @@
-let users = []
-console.log(users)
+let fruits = ["Apple", "Watermelon", "Lemon", "Strawberry"]
+console.log(fruits)
 
-// Adiciona um item no final do Array
-users.push("Rodrigo")
-users.push("João")
-users.push("Diego")
+let position = fruits.indexOf("Lemon")
+console.log(position)
 
-// Adiciona um item no início do Array.
-users.unshift("Maria")
-
-// Remove do início do Array
-users.shift()
-
-// Remove do final do Array
-users.pop()
-
-console.log(users)
+fruits.splice(position, 1)
+console.log(fruits)
