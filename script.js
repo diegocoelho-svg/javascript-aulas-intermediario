@@ -1,15 +1,14 @@
-let message = "Estou estudando os fundamentos do Javascript."
+const creditCard = "1234567812344928"
+console.log(creditCard.length)
 
-// Substituindo parte de um texto.
-console.log(message.replace("os fundamentos do Javascript", "Métodos de String")) // Primeiro: A ser substituído | Segundo: O que entra no lugar
+const lastDigits = creditCard.slice(-4)
 
-// Extraindo uma parte da string (start, end)
-console.log(message.slice(6, 30)) // Anda 5 caracteres
+console.log(creditCard)
 
-// Extraindo uma parte da string de trás para frente.
-console.log(message.slice(-11))
+// O padstart preenche a string do início.
+const maskedNumber = lastDigits.padStart(creditCard.length, "X")
+console.log(maskedNumber)
 
-let textWithSpace = "     Texto de exemplo          "
-console.log(textWithSpace.length)
-console.log(textWithSpace.trim())
-console.log(textWithSpace.trim().length)
+// O padEnd preenche a string no final.
+const number = "123"
+console.log(number.padEnd(10, "#"))
