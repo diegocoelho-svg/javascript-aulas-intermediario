@@ -1,5 +1,13 @@
-let fruits = ["Apple", "Orange", "Banana"]
+// While: Executa até que a condição seja verdadeira.
 
-// Verifica se um item existe no Array.
-console.log(fruits.includes("Apple"))
-console.log(fruits.includes("Strawberry"))
+let execute = true
+
+while (execute) {
+  let response = window.prompt("Deseja continuar: 1 (SIM) ou 2 (NÃO)") 
+
+  if (response === "2") {
+    execute = false
+  }
+}
+
+console.log("Segue o fluxo...")
