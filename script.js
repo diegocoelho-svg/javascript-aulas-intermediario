@@ -1,32 +1,17 @@
-let date = new Date("2024-07-02T14:00:00")
+// Intl é a API de Internacionalização do ECMASscript.
 
-console.log(date.toLocaleString())
-console.log(date.toLocaleString("en"))
+// Obtém informações da localidade
+const currentLocale = Intl.DateTimeFormat().resolvedOptions()
 
-// Exibe a data e hora em styles diferentes
-console.log(date.toLocaleString("pt-BR"))
+console.log(currentLocale)
 
-console.log(date.toLocaleString("pt-BR", {
-  dateStyle: "short",
-}))
+// Exibe no formato de acordo com a localidade.
+console.log(new Intl.DateTimeFormat("PT-BR").format(new Date()))
+console.log(new Intl.DateTimeFormat("en-US").format(new Date()))
 
-console.log(date.toLocaleString("pt-BR", {
-  dateStyle: "medium",
-}))
+const date = new Date()
+// Obtém a diferença em minutos do timezone.
+console.log(date.getTimezoneOffset())
 
-console.log(date.toLocaleString("pt-BR", {
-  dateStyle: "full",
-}))
-
-console.log(date.toLocaleString("pt-BR", {
-  day: "2-digit",
-  month:"2-digit",
-  hour: "2-digit",
-  minute: "2-digit",
-}))
-
-let amount = 5
-console.log(amount.toLocaleString("PT-BR", {
-  style:"currency",
-  currency: "BRL",
-}))
+// Obtém a diferença em horas do timezone.
+console.log(date.getTimezoneOffset() / 60)
