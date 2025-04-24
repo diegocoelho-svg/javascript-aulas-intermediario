@@ -1,17 +1,9 @@
-// for ... of itera sobre valores de um objeto iterável (Array é um objeto iterável)
-let students = ["Rodrigo", "João", "Amanda"]
+// Continue encerra(pula) a execução das instruções na iteração atual e continua a execução do loop com a próxima iteração.
 
-for (let student of students) { // Retorna o conteúdo
-  console.log(student)
-}
-
-let user = [
-  {
-    name: "Rodrigo",
-    email: "rodrigo@email.com",
+for (let i = 0; i < 10; i++) {
+  if (i === 5) {
+    continue
   }
-]
-
-for (let value of user) {
-  console.log(value)
+  
+  console.log(i)
 }
