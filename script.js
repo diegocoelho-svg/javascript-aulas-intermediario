@@ -1,22 +1,31 @@
-let date = new Date("2024-07-02T14:30:10")
+let date = new Date("July, 3, 2024 14:00:00")
 
-// Dia da semana de 0 à 6 (domingo é 0)
-console.log(date.getDay())
+console.log(date)
 
-// Dia do mês (0 a 30)
-console.log(date.getDate())
+console.log("------------------")
 
-// Mês
-console.log(date.getMonth() + 1)
+// Modificar o ano.
+date.setFullYear(2030)
+console.log(date)
 
-// Ano
-console.log(date.getFullYear())
+console.log("------------------")
 
-// Horas
-console.log(date.getHours())
+// Modificar o mês (Começa com 0)
+date.setMonth(8)
+console.log(date)
 
-// Minutos
-console.log(date.getMinutes())
+console.log("------------------------")
 
-// Segundos
-console.log(date.getSeconds())
+// Modifica a hora 
+date.setHours(18)
+console.log(date)
+
+console.log("------------------------")
+
+date.setMinutes(23)
+console.log(date)
+
+console.log("------------------------")
+
+date.setSeconds(30)
+console.log(date)
