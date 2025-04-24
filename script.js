@@ -1,8 +1,10 @@
-// Exibe data e hora atual.
-console.log(new Date())
+// Defina com ano, mês (0 - 11), dia.
+console.log(new Date(2024, 6, 3))
 
-// Exibe a data e hora de referência (considera o fuso)
-console.log(new Date(0))
+// Defina ano, mês (0 - 11) e dia e hora, minuto e segundo. data e hora.
+console.log(new Date(2024, 6, 3, 14, 30, 0))
 
-// Exibe o número de milissegundos desde a data de referencia
-console.log(new Date().getTime()) 
+// Definindo data e hora com String.
+console.log(new Date("2024-07-03T14:30:00"))
+
+console.log(new Date("July 3, 2024 13:30:33"))
