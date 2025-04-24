@@ -1,9 +1,8 @@
-// Continue encerra(pula) a execução das instruções na iteração atual e continua a execução do loop com a próxima iteração.
+// Exibe data e hora atual.
+console.log(new Date())
 
-for (let i = 0; i < 10; i++) {
-  if (i === 5) {
-    continue
-  }
-  
-  console.log(i)
-}
+// Exibe a data e hora de referência (considera o fuso)
+console.log(new Date(0))
+
+// Exibe o número de milissegundos desde a data de referencia
+console.log(new Date().getTime()) 
