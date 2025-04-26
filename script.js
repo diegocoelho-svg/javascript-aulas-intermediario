@@ -1,9 +1,25 @@
-class User {
-  static showMessage(message) {
-    console.log(message)
+class Animal {
+  constructor(name) {
+    this.name = name
+  }
+
+  makeNoise(){
+    console.log("Algum som genérico do animal")
   }
 }
 
-User.showMessage("Essa é uma mensagem")
+class Dog extends Animal {
+  // Não tem nada aqui.
+}
 
-// Quando não é utilizado o construtor, é possível utilizar o método estático, chamando direto da classe.
+const dog = new Dog("Jade")
+console.log(dog.name)
+dog.makeNoise()
+
+class Cat extends Animal {
+  // Não tem nada aqui.
+}
+
+const cat = new Cat("Aurora")
+console.log(cat.name)
+cat.makeNoise()
