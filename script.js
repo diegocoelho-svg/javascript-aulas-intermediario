@@ -1,14 +1,9 @@
 class User {
-  constructor(name, email) {
-    this.name = name
-    this.email = email
-  }
-
-  sendEmail() {
-    console.log("E-mail enviado para", this.name, "para o endereço", this.email)
+  static showMessage(message) {
+    console.log(message)
   }
 }
 
-const user = new User("Diego", "diego@email.com")
-user.sendEmail()
+User.showMessage("Essa é uma mensagem")
 
+// Quando não é utilizado o construtor, é possível utilizar o método estático, chamando direto da classe.
