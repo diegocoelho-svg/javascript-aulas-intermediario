@@ -1,34 +1,12 @@
-class Animal {
-  constructor(name) {
-    this.name = name
-  }
-
-  makeNoise(){
-    console.log("Algum som genérico do animal")
-  }
+const address = {
+  city: "São Paulo",
+  country: "Brazil",
 }
 
-class Dog extends Animal {
-  makeNoise() {
-    console.log("Woof! Woof! Woof!")
-  }
-}
+console.log(address)
 
-const dog = new Dog("Jade")
-console.log(dog.name)
-dog.makeNoise()
+const users = ["Rodrigo", "Joao"]
+console.log(users)
 
-class Cat extends Animal {
-  makeNoise() {
-    console.log("Miau! Miau! Miau!")
-  }
-
-  run() {
-    console.log("correndo")
-  }
-}
-
-const cat = new Cat("Aurora")
-console.log(cat.name)
-cat.makeNoise()
-cat.run()
+const username = "Diego Gonçalves"
+console.log(username.__proto__)
