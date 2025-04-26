@@ -1,11 +1,14 @@
-class Product {
-  constructor(name) {
+class User {
+  constructor(name, email) {
     this.name = name
+    this.email = email
+  }
+
+  sendEmail() {
+    console.log("E-mail enviado para", this.name, "para o endereço", this.email)
   }
 }
 
-const product1 = new Product("Teclado")
-console.log(product1.name)
+const user = new User("Diego", "diego@email.com")
+user.sendEmail()
 
-const product2 = new Product("Mouse")
-console.log(product2.name)
