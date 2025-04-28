@@ -1,24 +1,16 @@
-let obj = []
-let index = 350
+class MyCustomError {
+  constructor(message) {
+    this.message = "CLASSE DE ERRO CUSTOMIZADA: " + message
+  }
+}
 
 try {
-  // obj.execute()
-  if(!obj.includes(17)) {
-    throw new TypeError("O número 17 não está disponível.")
-  }
-
-  if (index > 99) {
-    throw new RangeError("Número está fora do intervalo. Escolha um número de 0 a 99")
-  }
-  
+  // throw new Error("Erro generico")
+  throw new MyCustomError("Erro personalizado lançado!")
 } catch (error) {
-  if(error instanceof TypeError) {
-    console.log(error)
-  } else if(error instanceof RangeError) {
+  if (error instanceof MyCustomError) {
     console.log(error.message)
   } else {
-    console.log("Não foi possível realizar a ação")
+    console.log("Não foi possível executar")
   }
-
-  // console.log(error)
 }
